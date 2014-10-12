@@ -1,0 +1,37 @@
+<%= form_for(@try) do |f| %>
+  <% if @try.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@try.errors.count, "error") %> prohibited this try from being saved:</h2>
+
+      <ul>
+      <% @try.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :position %><br />
+    <%= f.number_field :position %>
+  </div>
+  <div class="field">
+    <%= f.label :amount %><br />
+    <%= f.number_field :amount %>
+  </div>
+  <div class="field">
+    <%= f.label :multiplicator %><br />
+    <%= f.number_field :multiplicator %>
+  </div>
+  <div class="field">
+    <%= f.label :total %><br />
+    <%= f.number_field :total %>
+  </div>
+  <div class="field">
+    <%= f.label :player_id %><br />
+    <%= f.number_field :player_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

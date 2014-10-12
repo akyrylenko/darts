@@ -1,4 +1,7 @@
 Darts::Application.routes.draw do
+  resources :tries
+
+
   resources :games
 
 

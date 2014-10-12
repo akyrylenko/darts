@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Position:</b>
+  <%= @try.position %>
+</p>
+
+<p>
+  <b>Amount:</b>
+  <%= @try.amount %>
+</p>
+
+<p>
+  <b>Multiplicator:</b>
+  <%= @try.multiplicator %>
+</p>
+
+<p>
+  <b>Total:</b>
+  <%= @try.total %>
+</p>
+
+<p>
+  <b>Player:</b>
+  <%= @try.player_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_try_path(@try) %> |
+<%= link_to 'Back', tries_path %>
